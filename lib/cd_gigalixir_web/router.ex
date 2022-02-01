@@ -40,7 +40,8 @@ defmodule CdGigalixirWeb.Router do
 
       live_dashboard "/dashboard", metrics: CdGigalixirWeb.Telemetry
     end
-  # coveralls-ignore-stop
+
+    # coveralls-ignore-stop
   end
 
   # Enables the Swoosh mailbox preview in development.
