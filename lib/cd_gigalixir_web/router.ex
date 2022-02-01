@@ -38,6 +38,13 @@ defmodule CdGigalixirWeb.Router do
     scope "/" do
       pipe_through :browser
 
+      live "/categories", CategoryLive.Index, :index
+      live "/categories/new", CategoryLive.Index, :new
+      live "/categories/:id/edit", CategoryLive.Index, :edit
+
+      live "/categories/:id", CategoryLive.Show, :show
+      live "/categories/:id/show/edit", CategoryLive.Show, :edit
+
       live_dashboard "/dashboard", metrics: CdGigalixirWeb.Telemetry
     end
   # coveralls-ignore-stop
